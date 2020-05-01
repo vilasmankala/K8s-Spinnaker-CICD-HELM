@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maven-demo
+  namespace: uat
+  labels:
+    source: maven
+    stack: frontend
+    app: tomcat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      source: maven
+      app: tomcat
+  template:
+    metadata:
+      labels:
+        source: maven
+        app: tomcat
+    spec:
+      containers:
+      - name: maven-container
+        image: index.docker.io/tusharstudy2020/webappimages
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: maven-demo
+  namespace: uat
+spec:
+  selector:
+    source: maven
+    app: tomcat
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: 32440
+    targetPort: 8080
