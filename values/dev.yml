@@ -17,7 +17,7 @@ image:
 containerPort: 8080
 
 service:
-  nodeport: 32447
+  nodeport: 32446
   name: maven-demo
   type: NodePort
   protocol: TCP
