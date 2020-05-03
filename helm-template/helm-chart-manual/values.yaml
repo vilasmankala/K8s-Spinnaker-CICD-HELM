@@ -1,0 +1,23 @@
+name: 
+
+labels: 
+  source: 
+  stack: 
+  app: 
+  
+replicacount: 
+
+matchLabels:
+  source: 
+  app: 
+
+image:
+  repository: 
+  
+containerPort: 
+
+service:
+  nodeport: 
+  name: 
+  type: 
+  protocol:

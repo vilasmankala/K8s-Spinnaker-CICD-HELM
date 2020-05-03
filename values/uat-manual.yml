@@ -1,6 +1,2 @@
 image:
-  repository: index.docker.io/ramagcpgrafana/mavenapplication
   tag: ${ trigger.properties['TAG'] }
-
-service:
-  targetport: 32450
