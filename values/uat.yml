@@ -12,7 +12,7 @@ matchLabels:
   app: tomcat
 
 image:
-  repository: index.docker.io/ramagcpgrafana/mavenapplication
+  repository: index.docker.io/tusharstudy2020/webappimages
   
 containerPort: 8080
 
