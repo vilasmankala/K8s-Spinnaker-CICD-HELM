@@ -1,2 +1,2 @@
 image:
-  tag: ${#stage("Jenkins")["context"]["TAG"]}
+  tag: ${#stage(\"Jenkins\")[\"context\"][\"TAG\"]}
