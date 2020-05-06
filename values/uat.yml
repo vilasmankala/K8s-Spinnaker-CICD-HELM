@@ -5,7 +5,7 @@ labels:
   stack: frontend
   app: tomcat
   
-replicacount: 1
+replicacount: 3
 
 matchLabels:
   source: maven
